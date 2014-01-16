@@ -1,15 +1,14 @@
-function isLivingCellAliveNextPeriod(numSurroundingAlive)
-{
+var RulesEngine = function(){};
+
+RulesEngine.prototype._isLivingCellAliveNextPeriod = function(numSurroundingAlive) {
     return numSurroundingAlive == 2 || numSurroundingAlive == 3;
-}
+};
 
-function isDeadCellAliveNextPeriod(numSurroundingAlive)
-{
+RulesEngine.prototype._isDeadCellAliveNextPeriod = function(numSurroundingAlive) {
     return numSurroundingAlive == 3;
-}
+};
 
-function getNumSurroundCellsAlive(matrix, y, x)
-{
+RulesEngine.prototype._getNumSurroundingCellsAlive = function(matrix, y, x) {
     count = 0;
     for (var vert = y - 1; vert <= y + 1; vert++)
     {
@@ -31,15 +30,9 @@ function getNumSurroundCellsAlive(matrix, y, x)
         }
     }
     return count;
-}
+};
 
-function isCellAliveNextPeriod(matrix, y, x)
-{
-    var numSurroundingAlive = getNumSurroundCellsAlive(matrix, y, x);
-    return matrix[y][x] ? isLivingCellAliveNextPeriod(numSurroundingAlive) : isDeadCellAliveNextPeriod(numSurroundingAlive);
-}
-
-function getNextPeriod(matrix)
-{
-
-}
+RulesEngine.prototype.isCellAliveNextPeriod = function(matrix, y, x) {
+    var numSurroundingAlive = this._getNumSurroundingCellsAlive(matrix, y, x);
+    return matrix[y][x] ? this._isLivingCellAliveNextPeriod(numSurroundingAlive) : this._isDeadCellAliveNextPeriod(numSurroundingAlive);
+};

@@ -1,9 +1,9 @@
 
 
-describe("Does basic algebra", function() { //Use 'describe' to start a suite
+describe("Does basic algebra", function() { //SUITE - a collection of tests, one per file tested
 
-    it("adds 2 numbers", function() {      //Use 'it' to start a spec
-        expect(add(256, 256)).toEqual(512); //toEqual is a matcher, it uses === comparison
+    it("adds 2 numbers", function() {      //SPEC - Tests a single condition, never more
+        expect(add(256, 256)).toEqual(512); //EXPECTATION and MATCHER - Compares result with expected value
     });
 
     it("subtracts 2 numbers", function() {
