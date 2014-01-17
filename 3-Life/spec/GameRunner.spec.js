@@ -12,7 +12,7 @@ describe("Runs Conway's Game of Life", function()
     it("gets the next period given the current period", function() {
         var input = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]];
         var expectedOutput = [[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1]];
-        var result = runner.getNextPeriod(input);
+        var result = runner._getNextPeriod(input);
         expect(rulesEngine.isCellAliveNextPeriod).toHaveBeenCalled;
         expect(rulesEngine.isCellAliveNextPeriod.calls.length).toEqual(16);
         expect(result).toEqual(expectedOutput);

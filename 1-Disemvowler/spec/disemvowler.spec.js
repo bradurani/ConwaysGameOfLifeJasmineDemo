@@ -1,29 +1,22 @@
 
 
 describe("Removes all vowels from a string", function(){
-   it("removes all lowercase vowels from a string", function(){
-        expect(disemvoweler("Hello world")).toEqual("Hll wrld");
+   it("throws an exception when given null", function() {
+       expect(disemvowel(null)).toThrow("string must be populated");
     });
-
-    it("removes all uppercase vowels from a string")
-    {
-        expect(disemvoweler("AMERICAN EAGLE")).toEqual("MRCN GL");
-    }
-
-    it("removes AEIOUaieou", function() {
-        expect(disemvoweler("AEIOUaeiou")).toEqual("");
+   it("removes lowercase vowels", function() {
+       expect(disemvowel("american eagle")).toEqual("mrcn gl");
+   });
+    it("removes uppercase vowels", function() {
+       expect(disemvowel("HEY THERE")).toEqual("HY THR");
     });
-
-    it("does not modify an empty string", function() {
-        expect(disemvoweler("")).toEqual("");
+    it("removes all vowels", function(){
+       expect(disemvowel("AEIOUaeiou")).toEqual("");
     });
-
-    it("throws an exception on null", function() {
-        expect(function() { disemvoweler(null); } ).toThrow(new Error("NULL not allowed"));
+    it("returns blank string when given blank string", function(){
+        expect(disemvowel("")).toEqual("");
     });
-
-    it("Doesn't change a string with no vowels", function() {
-        expect(disemvoweler("Mmmm hmmmm")).toEqual("Mmmm hmmmm");
+    it("does not remove symbols", function(){
+        expect(disemvowel("@#$&@#^&$^")).toEqual("@#$&@#^&$^");
     });
-
 });

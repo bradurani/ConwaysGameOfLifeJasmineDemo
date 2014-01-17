@@ -2,9 +2,7 @@
 
 describe("Tests Jasmine Equality Matchers", function() {
 
-    /**
-     * The .toEqual matcher
-     */
+
     it("Demonstrates the toEqual() matcher", function() {
         expect(1).not.toEqual(true);  //uses === for primatives
     });

@@ -49,7 +49,7 @@ describe("Executes the rules of Conway's game of life", function()
     });
 
 
-    describe("Correctly counts the number fo live cells surrounding a given cell", function() {
+    describe("Correctly counts the number of live cells surrounding a given cell", function() {
         it("counts correctly for cells surrounded by 0 live cells", function() {
             expect(engine._getNumSurroundingCellsAlive([[0,0,0], [0,0,0], [0,0,0]], 1, 1 )).toBe(0);
         });
