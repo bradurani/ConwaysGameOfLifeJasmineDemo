@@ -6,6 +6,7 @@ Slides for presentation: https://docs.google.com/presentation/d/1ASDGgdkzKuJ7Epw
 Original Meetup: http://www.meetup.com/STL-JS-meetup/events/149993482/
  
 0-Jasmine - Basic Jasmine demo
-1-Life - Unit-Tested version of the Conway's Game of Life Algorithm
-3-LifeGraphical - A Functionally tested graphical version Life
-4-WebServiceSpy - Basic demo of unit testing asynchoronous functions 
+1-Disemvowler - Live code demo of Jasmine
+2-Matchers - Examples of equivalence expectations in Jasmine
+3-Life - Unit Tested version of the COnway's Game of Life algorithm
+5-Async examples of unit testing async functions
